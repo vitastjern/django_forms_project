@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+Learning Django - forms
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="jumbotron">
+            <form method="POST">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+        </div>     
+    </div>
+
+{% endblock %}
