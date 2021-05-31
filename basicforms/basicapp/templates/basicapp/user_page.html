@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 
 {% block title %}
-Learning Django - users
+Learning Django - forms
 {% endblock %}
 
 {% block content %}
     <div class="container">
         <div class="jumbotron">
+            <h3>Please register your user here:</h3>
             <form method="POST">
                 {{ form.as_p }}
                 {% csrf_token %}
